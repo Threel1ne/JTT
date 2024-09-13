@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.reloadingText,
+.bottomText,
+.loadingSpinner,
+.reasonText {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.reloadingText.show,
+.bottomText.show,
+.loadingSpinner.show,
+.reasonText.show {
+  opacity: 1;
+}
+
+.dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease-out;
+  z-index: 52320;
+}
+
+.dimmed {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.content-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 34343425;
+}
+
+html {
+  min-height: 100vh;
+  background-color: #262626 !important;
+  overflow: hidden;
+}
+body {
+  background-color: #262626;
+}
+.text-transition-v1 {
+  transition: font-size 150ms ease-in-out;
+}
+
+.fadetext {
+  animation: fadeOut 5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  83.33% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  min-width: 430px !important;
+}
+
+.wasdwasd {
+  color: red;
+}
+
+@media (max-width: 440px) {
+  .hideonsmall {
+    display: none;
+  }
+  .reducecolsonsmall {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .bottom-middle {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+  }
+}
+
+.bottom-middle {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1004;
+}
+
+.leaflet-marker-icon {
+  pointer-events: none !important;
+}
+
+.dark #map {
+  background-color: #262626 !important;
+}
+
+#map {
+  background-color: #d4dadc !important;
+}
+
+.centeredimage img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.imagethatisalignedtotheright {
+  display: block;
+  margin-left: auto;
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1003;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1002;
+}
+
+.top-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+.leaflet-marker-icon,
+.leaflet-interactive {
+  pointer-events: none !important;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+}
+
+.nah {
+  user-select: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0; /* Remove all padding */
+}
+
+.map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.info-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.info-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.intensity {
+  font-size: 100px;
+}
+
